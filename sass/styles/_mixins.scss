@@ -1,9 +1,10 @@
+// Pre-formating
 @mixin boxmodel-off {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+// Formating links
 @mixin typography-link($main-font, $main-color, $main-size) {
     a:link { 
         font-family: $main-font;
@@ -31,13 +32,13 @@
         text-decoration: none;
     }
 }
-
+// Formating list
 @mixin typography-list {
     li {
         list-style: none;
     }
 }
-
+// Formating navigation
 @mixin navigation-horizontal($position, $backgroudColor, $fontColor) {
     
     .navigation {
@@ -67,7 +68,7 @@
         }
     }
 }
-
+// Formating button
 @mixin btn($color, $bcgColor) {
         background-color: $bcgColor;
         color: $color;
