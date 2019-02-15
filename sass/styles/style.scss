@@ -1,0 +1,66 @@
+@import 'variables';
+@import 'mixins';
+
+
+// VARIABLES:
+
+// $main-font: 'Nanami-book';
+// $funny-font: 'master_of_break';
+// $large-size-font: 24px;
+// $medium-size-font: 16px;
+// $small-size-font: 12px;
+// $main-color: #120203;
+// $main-color-soft: #9f9a97;
+// $white-color: #fff2ee;
+// $orange-soft-color: #ed2024;
+// $orange-strong-color: #f01b16; 
+// $btn-orange-color: #ff7e66; 
+
+
+body {
+    @include boxmodel-off;
+    @include typography-link($main-font, $main-color, $medium-size-font);
+    @include typography-list;
+
+    color: $main-color;
+    background-color: $white-color;
+    font-family: $main-font;
+
+    .wrapper {
+        // navigation section.
+        @include navigation-horizontal(right,#fff, $main-color);
+        max-width: 1760px;
+        min-width: 320px;
+        .navigation__link:hover {
+            border-bottom: 15px solid yellow;
+        }
+
+        //home page section
+        .home {
+            min-height: 650px;
+            background-image: url(../../assets/cover_1.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        //reservation page section
+        .reservation {
+            text-align: center;
+            .reservation__title {
+
+            }
+            .reservation__subtext {
+
+            }
+            .reservation__button {
+                @include btn($white-color, $orange-soft-color);
+                line-height: 24px;
+                
+            }
+        }
+
+
+    }
+
+}
+

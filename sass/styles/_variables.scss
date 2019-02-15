@@ -1,0 +1,24 @@
+@font-face{
+    font-family: 'Nanami-book';
+    src: url("../../fonts/nanami/Nanami-Book.otf") format('opentype');
+};
+
+@font-face{
+    font-family: 'master_of_break';
+    src: url("../../fonts/master_of_break/Master_Of_Break/master_of_break.ttf") format('ttf');
+};
+
+
+$main-font: 'Nanami-book';
+$funny-font: 'master_of_break';
+
+$large-size-font: 24px;
+$medium-size-font: 16px;
+$small-size-font: 12px;
+
+$main-color: #120203;
+$main-color-soft: #9f9a97;
+$white-color: #fff2ee;
+$orange-soft-color: #ed2024;
+$orange-strong-color: #f01b16; 
+$btn-orange-color: #ff7e66; 

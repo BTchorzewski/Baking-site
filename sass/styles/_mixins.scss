@@ -1,0 +1,75 @@
+@mixin boxmodel-off {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin typography-link($main-font, $main-color, $main-size) {
+    a:link { 
+        font-family: $main-font;
+        color: $main-color;
+        font-size: $main-size;
+        text-decoration: none;
+
+    }
+    a:visited {
+        font-family: $main-font;
+        color: $main-color;
+        font-size: $main-size;
+        text-decoration: none;
+    }
+    a:hover {
+        font-family: $main-font;
+        color: $main-color;
+        font-size: $main-size;
+        text-decoration: none;
+    }
+    a:active {
+        font-family: $main-font;
+        color: $main-color;
+        font-size: $main-size;
+        text-decoration: none;
+    }
+}
+
+@mixin typography-list {
+    li {
+        list-style: none;
+    }
+}
+
+@mixin navigation-horizontal($position, $backgroudColor, $fontColor) {
+    
+    .navigation {
+        display: flex;
+        width: 100%;
+        background-color: $backgroudColor;
+
+        @if $position == 'right'{
+            justify-content: flex-end;
+        } @else if $position == 'left'{
+            justify-content: flex-start;
+        } @else if $position == 'center' {
+            justify-content: center;
+        }
+       
+       
+        .navigation__list {
+            display: flex;
+            flex-direction: row;
+            .navigation__item {
+                margin: 0 10px;
+
+                .navigation__link {
+                    // empty
+                }
+            }
+        }
+    }
+}
+
+@mixin btn($color, $bcgColor) {
+        background-color: $bcgColor;
+        color: $color;
+        border: none;
+}
