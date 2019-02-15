@@ -27,10 +27,10 @@ body {
     font-family: $main-font;
 
     .wrapper {
-        // navigation section.
-        
         max-width: 1760px;
         min-width: 320px;
+
+        // navigation section.
         @include navigation-horizontal(right,#fff, $main-color);
         .navigation {
             align-items: center;
@@ -49,7 +49,7 @@ body {
 
         //home page section
         .home {
-            min-height: 650px;
+            height: 770px;
             background-image: url(../../assets/cover_1.png);
             background-repeat: no-repeat;
             background-size: contain;
@@ -57,6 +57,7 @@ body {
 
         //reservation page section
         .reservation {
+            height: 600px;
             text-align: center;
             .reservation__title {
 
@@ -70,6 +71,181 @@ body {
                 
             }
         }
+
+        .ad {
+            max-height: 750px;
+            display: flex;
+
+            &__image {
+                width: 50%;
+            }
+            &__article {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .products {
+            height: 800px;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .features {
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+
+            .features__box {
+                display: inherit;
+                flex-direction: column;
+                align-items: center;
+                margin: 0 25px;
+                padding: 30px;
+            }
+            
+            .features__box:nth-of-type(2) {
+                border-left: 2px solid red;
+                border-right: 2px solid red;
+            }
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 300px);
+            
+            &__item {
+                display: inherit;
+                justify-content: center;
+                align-items: center;
+                .gallery__description {
+                    background-color: red;
+                    
+                }
+            }
+            &__item--1 {
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+                background-image: url(../../assets/cover_4.png);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            &__item--2 {
+                grid-column: 2 / 3;
+                grid-row: 1 / 2;
+                
+            }
+            &__item--3 {
+                grid-column: 3 / 5;
+                grid-row: 1 / 2;
+                background-image: url(../../assets/cover_5.png);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            &__item--4 {
+                grid-column: 1 / 3;
+                grid-row: 2 / 3;
+                background-image: url(../../assets/cover_6.png);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            &__item--5 {
+                grid-column: 3 / 4;
+                grid-row: 2 / 3;
+                background-image: url(../../assets/cover_7.png);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            &__item--6 {
+                grid-column: 4 / 5;
+                grid-row: 2 / 3;
+                background-image: url(../../assets/cover_8.png);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+
+        .blog {
+            height: 900px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            &__elements {
+                height: 300px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                padding: 50px ;
+                .blog__article {
+                    width: 250px;
+                    height: 350px;
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: center;
+                    margin: 0 15px;
+                    
+                    .blog__info {
+                        height: 150px;    
+                        width: 500px;
+                        background-color: white;
+                        border-radius: 0 0 40% 40%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    
+                    }
+                    
+                    .blog__info:hover {
+                        transform: scale(1.3);
+                    } 
+
+                }
+                .blog__article:nth-of-type(1) {
+                    background-image: url(../../assets/cover_9.png);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+                .blog__article:nth-of-type(2) {
+                    background-image: url(../../assets/cover_10.png);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+                .blog__article:nth-of-type(3) {
+                    background-image: url(../../assets/cover_11.png);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+                .blog__article:nth-of-type(4) {
+                    background-image: url(../../assets/cover_12.png);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+            }
+        }
+        
+        .contacts {
+            
+        
+            
+
+        }
+
 
 
     }
