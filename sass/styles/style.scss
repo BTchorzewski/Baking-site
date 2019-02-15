@@ -28,14 +28,19 @@ body {
 
     .wrapper {
         // navigation section.
-        @include navigation-horizontal(right,#fff, $main-color);
+        
         max-width: 1760px;
         min-width: 320px;
+        @include navigation-horizontal(right,#fff, $main-color);
         .navigation {
             align-items: center;
-
+            height: 100px;
             &__logo {
-                margin-right: auto;
+                width: 70px;
+                margin: 0 auto 0 50px;
+            }
+            &__list {
+                margin-right: 50px;
             }
         }
         .navigation__link:hover {
