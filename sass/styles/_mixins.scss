@@ -69,8 +69,8 @@
     }
 }
 // Formating button
-@mixin btn($color, $bcgColor) {
-        background-color: $bcgColor;
+@mixin btn($color, $bgColor) {
+        background-color: $bgColor;
         color: $color;
         border: none;
 }

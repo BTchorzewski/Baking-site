@@ -29,6 +29,7 @@ body {
     .funnyFont {
         font-family: $funny-font;
     }
+    
     .wrapper {
         max-width: 1760px;
         min-width: 320px;
@@ -126,7 +127,24 @@ body {
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: center;
+
+            .menu__title {
+                color: $orange-strong-color;
+                font-size: 42px;
+            }
+            .menu__subtext {
+                width: 90%;
+                color: $main-color-soft;
+                margin-top: 60px;
+            }
             
+            .menu__button {
+                @include btn($white-color, $orange-soft-color);
+                line-height: 60px;
+                width: 240px;
+                margin-top: 50px
+            }            
         }
 
         .products {
