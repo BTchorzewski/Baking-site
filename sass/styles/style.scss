@@ -88,11 +88,12 @@ body {
         }
 
         .ad {
-            max-height: 750px;
+            min-height: 750px;
             display: flex;
 
             &__image {
-                width: 50%;
+                max-width: 50%;
+                height: auto;
             }
             &__article {
                 width: 50%;
@@ -100,6 +101,22 @@ body {
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                text-align: center;
+                .article__title {
+                    width: 60%;
+                    color: $orange-soft-color;
+                    font-size: 42px;
+                    
+                }
+                .article__image {
+                    max-width: 100%;
+                    height: auto;
+
+                }
+                .article__subtext {
+                    color: $main-color-soft;
+                    width: 70%;
+                }
             }
 
         }
