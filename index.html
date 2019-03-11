@@ -188,12 +188,30 @@
         <section class="contacts">
             
             <form action="" class="contacts__form form">
-                <h1 class="form__title">Contacts Us</h1>
-                <input type="text" class="form__input form__name" required>
-                <input type="email" class="form__input form__email" required>
-                <input type="text" class="form__input form__subject" required>
-                <input type="text" class="form__input form__message" required>
+                <h1 class="form__title">Contacts <span class="funnyFont"> Us</span></h1>
+
+                <div class="form__input">
+                    <label for="name">Your name</label>
+                    <input id="name" type="text" class="form__name" required>
+                </div>
+
+                <div class="form__input">
+                    <label for="email">Email address</label>
+                    <input id="email" type="email" class="form__email" required>
+                </div>
+
+                <div class="form__input">
+                    <label for="subject">Subject</label>
+                    <input id="subject" type="text" class="form__subject" required>
+                </div>
+
+                <div class="form__input">
+                    <label for="subject">Message</label>
+                    <input id="message" type="text" class="form__message" required>    
+                </div>
+                                
                 <button class="form_button btn" type="submit">SUBMIT NOW</button>
+
             </form>
         </section>
 
