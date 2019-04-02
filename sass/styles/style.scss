@@ -440,13 +440,16 @@ body {
         }
 
         .contacts {
-            min-height: 800px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
             background-image: url(../../assets/cover_13.png);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center center;
+            
+            background-size: 100% 100%;
+           
             text-align: center;
-            padding-top: 300px;
+            
             color: $white-color;
 
             input[type='text'],
@@ -460,10 +463,13 @@ body {
 
 
             form {
-                display: flex;
-                flex-flow: row wrap;
-                justify-content: space-evenly;
-                align-items: center;
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+                grid-template-rows: repeat(8,1fr);
+                grid-gap: 5px;
+                
+                
+
                 overflow-x: hidden;
 
                 .form__group {
@@ -485,35 +491,19 @@ body {
                     }
                 }
                 .form__title {
-                    display: block;
-                    width: 100%;
-                    margin-bottom: 40px;
+                    
                     font-size: 32px;
                     letter-spacing: 2px;
+                    grid-area: 1 / 1 / 2 / 5;
                     
                     
                 }
-                // .form__name {
-                //     width: 21.875%;
-                // }
-                // .form__email {
-                //     width: 21.875%;
-                //     margin: 0 -11.6%;
-                // }
-                // .form__subject {
-                //     width: 21.875%;
-                // }
-
-                // .form__message {
-                //     width: 71%;
-                //     height: 400px;
-                //     margin: 25px 0;
-                // }
+                
                 .form_button {
                     @include btn($white-color, $orange-soft-color);
                     width: 71.5%;
                     height: 40px;
-                
+                    
                 }
                 
                 
