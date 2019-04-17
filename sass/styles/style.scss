@@ -24,9 +24,11 @@
 }
 .funnyTitle {
     font-family: $funny-font;
+    font-weight: 700;
     -webkit-text-stroke-color: #fff;
-    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-width: .5rem;
     -webkit-text-fill-color: $orange-strong-color;
+    letter-spacing: .5rem;
 }
 *,
 *::after,
@@ -41,7 +43,7 @@ body {
     
     @include typography-link($main-font, $main-color, $medium-size-font);
     @include typography-list;
-
+    
     color: $main-color;
     background-color: $white-color;
     font-family: $main-font;
@@ -55,7 +57,8 @@ body {
         margin: 0 auto;    
         overflow-x: hidden;
         border: 1px solid black;
-
+        background-color: #fff;
+        
         // navigation section.
         @include navigation-horizontal(right,#fff, $main-color);
         .navigation {
@@ -117,13 +120,15 @@ body {
             background-color: #fff;
             .reservation__title {
                 color: $orange-strong-color;
-                font-size: 4.2rem;
+                font-size: 3.8rem;
+                font-weight: 300
                 
             }
             .reservation__subtext {
-                width: 90%;
+                width: 60%;
                 color: $main-color-soft;
                 margin-top: 6rem;
+                line-height: 2rem;
             }
             .reservation__button {
                 @include btn($white-color, $orange-soft-color);
@@ -136,7 +141,7 @@ body {
         .ad {
             min-height: auto;
             display: flex;
-            
+            background-color: #fff2ed;
             &__image {
                 max-width: 50%;
                 height: auto;
@@ -152,14 +157,17 @@ body {
                     width: 60%;
                     color: $orange-soft-color;
                     font-size: 4.2rem;
+                    line-height: 5rem;
                 }
                 .article__image {
                     max-width: 100%;
                     height: auto;
+                    margin: 4rem 0;
 }
                 .article__subtext {
                     color: $main-color-soft;
                     width: 70%;
+                    line-height: 2rem;
                 }
             }
 
@@ -171,13 +179,16 @@ body {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            text-align: center;
             background-color: #fff;
             .menu__title {
                 color: $orange-strong-color;
-                font-size: 4.2rem;
+                font-size: 3.8rem;
+                font-weight: 300
             }
             .menu__subtext {
-                width: 90%;
+                width: 60%;
+                line-height: 2rem;
                 color: $main-color-soft;
                 margin-top: 6rem;
             }
@@ -191,23 +202,41 @@ body {
         }
 
         .products {
-            max-height: 80rem;
+            
             .cake {
-                height: auto;
+                max-height: 80rem;
                 font-size: $large-size-font;
                 color: $white-color;
-                padding: 5% 0 10% 50%;
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 0 10% 0 55%;
+
                 &__title {
-                    font-size: 1.8em;
+                    font-size: 8rem;
+                    line-height: 9rem;
+                    margin-bottom: 2rem;
                 }
                 &__subtext {
                     font-size: 0.8em;
+                    margin-bottom: 2rem;
+                }
+                &__price {
+                    font-size: 4rem;
+                    margin-bottom: 2rem;
                 }
                 &__button {
+                    width: 15rem;
+                    height: 6rem;
+                    color: #fff;
+                    font-size: 2rem;
+                    font-weight: 500;
+                    border: 0.3rem solid #fff;
                     background-color: transparent;
+                    text-transform: uppercase
                 }
             }
 
@@ -225,7 +254,12 @@ body {
             align-items: center;
             background-color: #fff;
             .features__image {
-                margin-bottom: 1.5rem;
+                margin-bottom: 2.5rem;
+            }
+
+            .features__text {
+                text-align: center;
+                font-size: 1.8rem;
             }
 
             .features__box {
@@ -238,6 +272,17 @@ body {
             }
             
             .features__box:nth-of-type(2) {
+                position: relative;
+                margin: 0 -5rem;
+            }
+
+            .features__box:nth-of-type(2)::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 100%;
+                height: 60%;
                 border-left: 0.2rem solid #000;
                 border-right: 0.2rem solid #000;
             } 
@@ -247,7 +292,7 @@ body {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: repeat(2, minmax(40rem, auto));
-            
+            background-color: #fff2ed;
             &__item {
                 display: inherit;
                 grid-template-columns: repeat(1, 1fr);
@@ -344,12 +389,12 @@ body {
         }
 
         .blog {
-            height: 90rem;
+            min-height: 60rem;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background-color: #fff;
+            margin-bottom: -10rem;
             text-align: center;
             &__title {
                 color: $orange-strong-color;
@@ -508,14 +553,15 @@ body {
         }
         
         .clicks {
-            height: 60rem;
+            height: 40rem;
             display: flex;
             justify-content: center;
             align-items: center;
-            
+            margin-top: -13rem;
+            background-color: #fff2ed;
             .click {
                 background-color: #fff;
-                height: 30rem;
+                height: 25rem;
                 width: 20rem;
                 
                 &__image {
@@ -523,10 +569,12 @@ body {
                     // background settings
                     background-repeat: no-repeat;
                     background-size: cover;
+                    background-position: center;
                     // icon position;
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    
                 }
                 
                 &__information {
@@ -544,6 +592,10 @@ body {
                         text-align: center;
                     }
                 }
+            }
+
+            .click:hover .click__image {
+                background-size: 120%;
             }
            
             .click:nth-of-type(1) {
