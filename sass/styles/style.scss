@@ -614,33 +614,44 @@ body {
         }
 
         .map {
-            height: 30rem;
+            height: 40rem;
             display: flex;
             justify-content: center;
             align-items: center;
             background: url(../../assets/cover_14.png);
             background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center center;
+            background-size: cover;
+            background-position: left center;
             box-shadow: inset 0 0 0 200rem rgba(128, 127, 127, 0.616);
-            transition: all 500ms;
             font-weight: 700;
             color: $white-color;
-
-            &__logo {
-                display: inline-block;
-                font-family: $funny-font;
-                line-height: 4.5rem;
-                font-size: $medium-size-font;
-                font-weight: 200;
-                letter-spacing: 0.2rem;
-                background-color: $orange-strong-color;
-                width: 4rem;
-                height: 4rem;
-                border-radius: 50%;
-                box-sizing: border-box;
-                padding-left: 1rem;
+            &__text,
+            &__text:link,
+            &__text:visited,
+            &__text:hover,
+            &__text:active {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                width: 100%;
+                font-weight: 700;
+                color: $white-color;
+                cursor: pointer;
             }
+            &__logo {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-left: .8rem;
+                margin: 0 .5rem;
+                width: 5rem;
+                height: 5rem;
+                border-radius: 50%;
+                font-family: $funny-font;
+                font-size: 1.8rem;
+                background-color: $orange-strong-color;
+            }  
         }
 
         .footer {
