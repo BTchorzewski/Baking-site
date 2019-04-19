@@ -655,14 +655,15 @@ body {
         }
 
         .footer {
+           height: 15rem; 
            display: flex;
            flex-direction: column;
            align-items: center;
-                                 
+           justify-content: space-evenly;                      
            &__title {
                color: $orange-strong-color;
                font-size: $large-size-font;
-               margin-top: 35px;
+               margin-top: 2rem;
             }
 
            &__copyrights {
