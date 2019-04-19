@@ -56,8 +56,6 @@ body {
         min-width: 32rem;
         margin: 0 auto;    
         overflow-x: hidden;
-        border: 1px solid black;
-        background-color: #fff;
         
         // navigation section.
         @include navigation-horizontal(right,#fff, $main-color);
@@ -79,12 +77,13 @@ body {
         //home page section
         .home {
             width: 100%;
-            max-height: 60rem;
+            height: 100vh;
             background-image: url(../../assets/cake2.png);
             background-repeat: no-repeat;
             background-size: cover;
             position: relative;
-
+            display: flex;
+            align-items: center;
             &__element {
                 width: 100%;
                 height: 100%;
@@ -94,13 +93,11 @@ body {
                 justify-content: center;
                 align-items: center
             }
-            
             &__title {
                 font-size: 5em;
                 line-height: 4em;
                 letter-spacing: 0.1rem;
             }
-
             &__subtitle {
                 font-size: 1.2em;
                 font-weight: 600;
@@ -108,7 +105,6 @@ body {
                 color: $white-color;
             }
         }
-
         //reservation page section
         .reservation {
             height: 60rem;
@@ -121,8 +117,10 @@ body {
             .reservation__title {
                 color: $orange-strong-color;
                 font-size: 3.8rem;
-                font-weight: 300
-                
+                font-weight: 300;
+                span {
+                    margin-left: 1rem;
+                }
             }
             .reservation__subtext {
                 width: 60%;
@@ -202,9 +200,8 @@ body {
         }
 
         .products {
-            
             .cake {
-                max-height: 80rem;
+                height: 100vh;
                 font-size: $large-size-font;
                 color: $white-color;
                 background-repeat: no-repeat;
@@ -236,7 +233,7 @@ body {
                     font-weight: 500;
                     border: 0.3rem solid #fff;
                     background-color: transparent;
-                    text-transform: uppercase
+                    text-transform: uppercase;
                 }
             }
 
@@ -291,7 +288,7 @@ body {
         .gallery {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(2, minmax(40rem, auto));
+            grid-template-rows: repeat(2, minmax(50vh, auto));
             background-color: #fff2ed;
             &__item {
                 display: inherit;
@@ -389,7 +386,7 @@ body {
         }
 
         .blog {
-            min-height: 60rem;
+            height: 60rem;
             display: flex;
             flex-direction: column;
             align-items: center;
