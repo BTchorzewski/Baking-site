@@ -1,0 +1,74 @@
+.contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -20rem -1.5rem 15rem -1.5rem;
+    
+    text-align: center;
+    color: $white-color;
+    input[type='text'],
+    input[type='email'] {
+        display: block;
+        border: 0.1rem solid #fff;
+        background: transparent;
+        height: 3.5rem;
+        width: 100%;
+        color: $white-color;
+    }
+    textarea {
+        resize: none;
+        border: 0.1rem solid #fff;
+        background: transparent;
+        width: 100%;
+        height: 100%;
+    }
+
+    form {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-rows: repeat(12, minmax(3rem,auto));
+        grid-template-columns: repeat(16, 1fr);
+        grid-gap: 1.5rem;
+        background-image: url(../../assets/cover_13.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        .form__group {
+            align-self: end;
+        }
+
+        .form__title {
+            font-size: 3.2rem;
+            letter-spacing: 0.2rem;
+            grid-column: 2 / 16;
+            grid-row: 5 / 6;
+        }
+        .form__group--1 {
+            grid-column: 3 / 7;
+            grid-row: 6 / 7;
+        }
+        .form__group--2 {
+            grid-column: 7 / 11;
+            grid-row: 6 / 7;
+        }
+        .form__group--3 {
+            grid-column: 11 / 15;
+            grid-row: 6 / 7;
+        }
+        .form__group--4 {
+            grid-column: 3 / 15;
+            grid-row: 7 / 10;
+            align-self: stretch;
+            
+        }
+        .form_button {
+            grid-column: 3 / 15;
+            grid-row: 10 / 11;
+            align-self: end;
+            @include btn($white-color, $orange-soft-color);
+            width: initial;
+            height: 4rem;
+        }
+    }
+}

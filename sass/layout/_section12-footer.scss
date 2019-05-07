@@ -1,0 +1,23 @@
+.footer {
+    height: 15rem; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;                      
+    &__title {
+        color: $orange-strong-color;
+        font-size: $large-size-font;
+        margin-top: 2rem;
+     }
+ 
+    &__copyrights {
+        font-size: $small-size-font;
+        color: $main-color-soft;
+        font-weight: 600;
+        letter-spacing: 0.1rem;
+     }
+ 
+    &__social-link {
+        margin: 0 0.2rem;
+     }
+}

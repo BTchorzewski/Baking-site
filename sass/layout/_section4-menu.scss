@@ -1,0 +1,27 @@
+.menu {
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    .menu__title {
+        color: $orange-strong-color;
+        font-size: 3.8rem;
+        font-weight: 300
+    }
+    .menu__subtext {
+        width: 60%;
+        line-height: 2rem;
+        color: $main-color-soft;
+        margin-top: 6rem;
+    }
+    
+    .menu__button {
+        @include btn($white-color, $orange-soft-color);
+        line-height: 6rem;
+        width: 24rem;
+        margin-top: 5rem;
+    }            
+}

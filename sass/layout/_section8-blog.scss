@@ -1,0 +1,88 @@
+.blog {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem 0 20rem;
+    text-align: center;
+    padding: 5rem 0;
+    &__title {
+        color: $orange-strong-color;
+        font-size: 4.2rem;
+    }
+    &__subtext {
+        width: 90%;
+        color: $main-color-soft;
+        margin-top: 6rem;
+    }
+    &__elements {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 5rem;
+        .element__article {
+            width: 25rem;
+            height: 35rem;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            margin: 1rem 1.5rem;
+            .element__info {
+                height: 18rem;    
+                width: 45rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+                overflow: hidden;
+                background-color: white;
+                clip-path: circle(60% at 50% -10%);
+                transition: all 500ms;
+               .element__logo {
+                    color: $orange-strong-color;
+                    font-size: 1.8rem;
+                    letter-spacing: .2rem;
+                }
+                .element__button {
+                    @include btn($white-color, $orange-soft-color);
+                    padding: .5rem;
+                    margin-top: 5rem;
+                }
+            }
+        }
+        .element__article:hover {
+            margin-top: 1.5rem;
+            .element__info {
+            height: 15rem;
+            width: 100rem;
+            clip-path: circle(90% at 50% -25%);
+            transform: scale(1.1);
+            }
+            .element__button {
+                margin-top: .1rem;
+            }
+        }
+        .element__article:nth-of-type(1) {
+            background-image: url(../../assets/cover_9.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .element__article:nth-of-type(2) {
+            background-image: url(../../assets/cover_10.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .element__article:nth-of-type(3) {
+            background-image: url(../../assets/cover_11.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .element__article:nth-of-type(4) {
+            background-image: url(../../assets/cover_12.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}

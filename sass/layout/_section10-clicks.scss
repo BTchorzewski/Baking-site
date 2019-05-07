@@ -1,0 +1,66 @@
+.clicks {
+    height: 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -13rem;
+    background-color: #fff2ed;
+    .click {
+        background-color: #fff;
+        height: 25rem;
+        width: 20rem;
+        
+        &__image {
+            height: 50%;
+            // background settings
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            // icon position;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        
+        &__information {
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            .click__title {
+                margin: 3rem 0 1rem;
+            }
+            .click__subtext {
+                color: $main-color-soft;
+                font-size: $small-size-font;
+                text-align: center;
+            }
+        }
+    }
+
+    .click:hover .click__image {
+        background-size: 120%;
+    }
+   
+    .click:nth-of-type(1) {
+        
+        .click__image{
+            background-image: url(../../assets/cover_15.png);
+        }
+    }
+    .click:nth-of-type(2) {
+        margin: 0 3rem;
+        .click__image{
+            background-image: url(../../assets/cover_16.png);
+        }
+    }
+    .click:nth-of-type(3) {
+        
+        .click__image{
+            background-image: url(../../assets/cover_17.png);
+        }
+        
+    }
+}

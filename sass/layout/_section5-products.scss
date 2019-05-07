@@ -1,0 +1,44 @@
+.products {
+    .cake {
+        height: 100vh;
+        font-size: $large-size-font;
+        color: $white-color;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 10% 0 55%;
+
+        &__title {
+            font-size: 8rem;
+            line-height: 9rem;
+            margin-bottom: 2rem;
+        }
+        &__subtext {
+            font-size: 0.8em;
+            margin-bottom: 2rem;
+        }
+        &__price {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+        }
+        &__button {
+            width: 15rem;
+            height: 6rem;
+            color: #fff;
+            font-size: 2rem;
+            font-weight: 500;
+            border: 0.3rem solid #fff;
+            background-color: transparent;
+            text-transform: uppercase;
+        }
+    }
+
+    @for $i from 1 through 4 {
+        .cake--#{$i} {
+            background-image: url(../../assets/cake#{$i}.png);
+        }
+    }
+}
