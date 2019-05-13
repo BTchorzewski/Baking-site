@@ -6,8 +6,8 @@ var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 var csslint = require('gulp-csslint');
-
-
+var cleanCSS = require('gulp-clean-css');
+// .pipe(cleanCSS({compatibility: 'ie8'}))
 gulp.task('browserSync', function () {
     browserSync.init({
         server: {
@@ -26,7 +26,7 @@ gulp.task('sass', function () {
     }))
         .pipe(csslint())
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./css'))
+        .pipe(gulp.dest('./css/style'))
         .pipe(browserSync.reload({
         stream: true
     }));

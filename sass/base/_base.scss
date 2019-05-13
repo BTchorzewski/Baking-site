@@ -1,8 +1,21 @@
 *,
 *::after,
 *::before {
-    @include boxmodel-off
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 html {
     font-size: 62.5%
+}
+
+body {
+    background-color: $white-color;
+}    
+
+.wrapper {
+    max-width: 146rem;
+    min-width: 32rem;
+    margin: 0 auto;
+    overflow-x: hidden;
 }

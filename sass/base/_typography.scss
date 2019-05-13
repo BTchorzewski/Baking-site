@@ -1,0 +1,70 @@
+@import "./variables";
+@font-face{
+    font-family: 'Nanami-book';
+    src: url(../../fonts/nanami/Nanami-Book.otf) format('opentype');
+};
+
+@font-face{
+    font-family: 'master_of_break';
+    src: url(../../fonts/master_of_break/Master_Of_Break/master_of_break.ttf) format('truetype');
+};
+
+body {
+    color: $main-color;
+    font-family: $primary-font;
+    font-size: $medium-size-font;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+    font-family: $primary-font;
+    color: $main-color;
+    font-size: $medium-size-font;
+    text-decoration: none;
+}
+
+.special-font {
+    font-family: $secondary-font;
+    
+}
+// headings
+.heading-primary {
+    font-family: $secondary-font;
+    font-weight: 700;
+    -webkit-text-stroke-color: $white-color;
+    -webkit-text-stroke-width: .5rem;
+    -webkit-text-fill-color: $orange-strong-color;
+    letter-spacing: .5rem;
+}
+.heading-secondary {
+    color: $orange-strong-color;
+    font-size: 4.2rem;
+}
+// paragraphs
+.paragraph-primary {
+    width: 90%;
+    color: $main-color-soft;
+    margin-top: 6rem;
+}
+
+.home__title {
+    font-size: 5em;
+    line-height: 4em;
+    letter-spacing: 0.1rem;
+}
+.home__subtitle {
+    font-size: 1.2em;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    color: $white-color;
+}
+input[type='text'],
+input[type='email'] {
+    height: 3.5rem;
+    color: $white-color;
+}
+textarea {
+    resize: none;
+    
+}

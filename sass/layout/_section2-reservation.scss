@@ -6,22 +6,10 @@
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    .reservation__title {
-        color: $orange-strong-color;
-        font-size: 3.8rem;
-        font-weight: 300;
-        span {
-            margin-left: 1rem;
-        }
-    }
     .reservation__subtext {
         width: 60%;
-        color: $main-color-soft;
-        margin-top: 6rem;
-        line-height: 2rem;
     }
     .reservation__button {
-        @include btn($white-color, $orange-soft-color);
         line-height: 6rem;
         width: 24rem;
         margin-top: 5rem;

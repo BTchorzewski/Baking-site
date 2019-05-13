@@ -1,0 +1,31 @@
+// font styling
+.u-text-center { text-align: center }
+
+
+// margins
+
+// u-margin-top-{1-10}
+@for $i from 1 through 10 {
+    .u-margin-top-#{$i} {
+        margin-top: #{$i}rem;
+    };
+}
+// u-margin-right-{1-10}
+@for $i from 1 through 10 {
+    .u-margin-right-#{$i} {
+        margin-right: #{$i}rem;
+    };
+}
+// u-margin-bottom-{1-10}
+@for $i from 1 through 10 {
+    .u-margin-bottom-#{$i} {
+        margin-bottom: #{$i}rem;
+    };
+}
+// u-margin-left-{1-10}
+@for $i from 1 through 10 {
+    .u-margin-left-#{$i} {
+        margin-left: #{$i}rem;
+    };
+}
+    

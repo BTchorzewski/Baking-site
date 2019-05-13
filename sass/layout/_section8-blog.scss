@@ -4,18 +4,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 5rem 0 20rem;
+    margin: 5rem 0 2rem;
     text-align: center;
     padding: 5rem 0;
-    &__title {
-        color: $orange-strong-color;
-        font-size: 4.2rem;
-    }
-    &__subtext {
-        width: 90%;
-        color: $main-color-soft;
-        margin-top: 6rem;
-    }
     &__elements {
         width: 100%;
         display: flex;
@@ -37,7 +28,7 @@
                 align-items: center;
                 justify-content: space-evenly;
                 overflow: hidden;
-                background-color: white;
+                background-color: $white-color;
                 clip-path: circle(60% at 50% -10%);
                 transition: all 500ms;
                .element__logo {
@@ -83,6 +74,30 @@
             background-image: url(../../assets/cover_12.png);
             background-repeat: no-repeat;
             background-position: center;
+        }
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .blog {
+        &__elements {
+            .element__article {
+                .element__info {
+                    .element__button {
+                        margin-top: 1rem;
+                    }
+                }
+            }
+            .element__article:hover {
+                .element__info {
+                    .element__logo {
+                        margin-top: -2rem;
+                    }
+                    .element__button {
+                        margin-top: -3rem;
+                    }
+                }
+            }
         }
     }
 }
