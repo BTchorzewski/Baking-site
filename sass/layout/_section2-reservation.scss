@@ -1,17 +1,9 @@
 .reservation {
-    height: 60rem;
+    max-height: 60rem;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
-    .reservation__subtext {
-        width: 60%;
-    }
-    .reservation__button {
-        line-height: 6rem;
-        width: 24rem;
-        margin-top: 5rem;
-    }
+    background-color: $white-color;
 }

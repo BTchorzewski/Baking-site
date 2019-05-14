@@ -1,18 +1,9 @@
 .menu {
-    height: 60rem;
+    max-height: 60rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     background-color: $white-color;
-    .menu__subtext {
-        width: 60%;
-    }
-    .menu__button {
-        @include btn($white-color, $orange-soft-color);
-        line-height: 6rem;
-        width: 24rem;
-        margin-top: 5rem;
-    }            
 }

@@ -43,7 +43,7 @@ a:active {
 }
 // paragraphs
 .paragraph-primary {
-    width: 90%;
+    width: 60%;
     color: $main-color-soft;
     margin-top: 6rem;
 }
@@ -67,4 +67,66 @@ input[type='email'] {
 textarea {
     resize: none;
     
+}
+
+.article__title {
+    width: 70%;
+    color: $orange-soft-color;
+    font-size: 4.2rem;
+    line-height: 5rem;
+}
+.article__subtext {
+    color: $main-color-soft;
+    width: 70%;
+    line-height: 2rem;
+}
+// product section
+.cake__title {
+    font-size: 8rem;
+    line-height: 9rem;
+}
+.cake__subtext {
+    font-size: 0.8em;
+}
+.cake__price {
+    font-size: 4rem;
+}
+// feaures section
+
+// clicks section
+.click__title {
+    margin: 3rem 0 1rem;
+}
+.click__subtext {
+    color: $main-color-soft;
+    font-size: $small-size-font;
+}
+// map section
+.map {
+    &__heading,
+    &__heading:link,
+    &__heading:visited {
+        color: $white-color;
+        font-size: 2rem;
+        line-height: 2.4rem;
+        letter-spacing: .3rem;
+        font-weight: 400;
+        cursor: pointer;
+    }
+    &__heading:hover {
+        color: $white-color;
+        font-size: 2rem;
+        text-shadow: .8rem .8rem 2rem rgba($black-color, .8);
+    }
+    &__heading:active {
+        text-shadow: .8rem .4rem 2rem rgba($black-color, .8);
+        transform: translateY(.2rem);
+    }
+    &__subheading {
+        display: inline-block;
+        background-color: $orange-strong-color;
+        clip-path: circle(34%);
+        padding: 3rem 3rem 2.5rem 4rem;
+        margin: 0 -2.5rem
+    }  
 }

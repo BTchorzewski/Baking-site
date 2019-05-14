@@ -9,23 +9,37 @@
     .u-margin-top-#{$i} {
         margin-top: #{$i}rem;
     };
-}
-// u-margin-right-{1-10}
-@for $i from 1 through 10 {
     .u-margin-right-#{$i} {
         margin-right: #{$i}rem;
     };
-}
-// u-margin-bottom-{1-10}
-@for $i from 1 through 10 {
     .u-margin-bottom-#{$i} {
         margin-bottom: #{$i}rem;
     };
-}
-// u-margin-left-{1-10}
-@for $i from 1 through 10 {
     .u-margin-left-#{$i} {
         margin-left: #{$i}rem;
+    };
+    .u-margin-#{$i} {
+        margin: #{$i}rem;
+    };
+}
+// paddings
+
+// u-padding-top-{1-10}
+@for $i from 1 through 10 {
+    .u-padding-top-#{$i} {
+        padding-top: #{$i}rem;
+    };
+    .u-padding-right-#{$i} {
+        padding-right: #{$i}rem;
+    };
+    .u-padding-bottom-#{$i} {
+        padding-bottom: #{$i}rem;
+    };
+    .u-padding-left-#{$i} {
+        padding-left: #{$i}rem;
+    };
+    .u-padding-#{$i} {
+        padding: #{$i}rem;
     };
 }
     
