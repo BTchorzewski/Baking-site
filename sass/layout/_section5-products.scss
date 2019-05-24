@@ -1,6 +1,6 @@
 .products {
+    
     .cake {
-        height: 95vh;
         font-size: $large-size-font;
         color: $white-color;
         background-repeat: no-repeat;
@@ -9,7 +9,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 0 10% 0 55%;
+        padding: 10% 10% 10% 55%;
     }
 
     @for $i from 1 through 4 {
