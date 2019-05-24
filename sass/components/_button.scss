@@ -1,16 +1,21 @@
 .button-primary {
-    background-color: $button-background-color;
-    color: $button-text-color;
-    line-height: 6rem;
-    width: 24rem;
-    box-shadow: 0 .5rem 1rem rgba($black-color,.4);
-    transform: translateY(-0.3rem);
-    transition: all .3s;
-    outline: none;
-    &:active {
-      transform: translateY(0);  
-      box-shadow: 0 .1rem 1rem rgba($black-color,.4);
+    &:link,
+    &:visited {
+        background-color: $button-background-color;
+        color: $button-text-color;
+        line-height: 6rem;
+        width: 24rem;
+        box-shadow: 0 .5rem 1rem rgba($black-color,.4);
+        transition: all .3s;
     }
+    &:hover {
+        transform: translateY(-0.3rem);
+    }
+    &:active {
+        transform: translateY(0);
+        box-shadow: 0 .1rem 1rem rgba($black-color,.4);  
+    }
+    
 }
 .button-primary-small {
     background-color: $button-background-color;
@@ -22,17 +27,27 @@
     }
 }
 .button-secondary {
-    background-color: transparent;
-    color: $button-text-color;
-    width: 15rem;
-    height: 6rem;
-    color: $white-color;
-    font-size: 2rem;
-    font-weight: 500;
-    border: 0.3rem solid $white-color;
-    background-color: transparent;
-    text-transform: uppercase;
+    &:link,
+    &:visited {
+        background-color: transparent;
+        color: $button-text-color;
+        width: 15rem;
+        height: 6rem;
+        line-height: 6rem;
+        text-align: center;
+        color: $white-color;
+        font-size: 2rem;
+        font-weight: 400;
+        border: 0.3rem solid $white-color;
+        background-color: transparent;
+        text-transform: uppercase;
+    }
+    
     &:hover {
-        box-shadow: 0 2rem 5rem rgba($black-color,.8);
+        transform: translateY(-0.3rem);
+    }
+    &:active {
+        transform: translateY(0);
+        box-shadow: 0 .1rem 1rem rgba($black-color,.4);  
     }
 }
