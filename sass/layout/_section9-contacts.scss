@@ -3,4 +3,79 @@
     background-image: url(../../assets/cover_13.png);
     background-size: cover;
     background-position: center;
+    box-shadow: inset 200rem 200rem rgba($black-color, .4);
+    padding: 10rem 2rem;
 }
+// grid
+.contact-form {
+    display: grid;
+    grid-gap: 2rem;
+    justify-items: stretch;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 6rem auto 4rem;
+    &__cta {
+        &--1 {
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        &--2 {
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+        &--3 {
+            grid-column: 3/4;
+            grid-row: 1/2;
+        }
+        &--4 {
+            grid-column: 1/4;
+            grid-row: 2/3;
+        }
+    }
+    &__button {
+        grid-column: 1/4;
+        grid-row: 3/4;
+    }
+}
+.contact-form {
+    &__cta {
+        position: relative;
+        
+    }
+    &__input {
+        position: absolute;
+        top: rem;
+        left: 0;
+        z-index: 1;
+
+    }
+    &__input:focus + &__label {
+        color: red;
+    }
+    &__label {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        z-index: 2;
+        transition: all 2s;
+    }
+
+    
+}
+
+.contact-form {
+    &__input,
+    &__textarea {
+        
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        border: .1rem solid $white-color;
+        outline: none;
+        background-color: transparent;
+        color: $white-color;
+        font-size: 1.8rem;
+        font-weight: 700;
+        padding-left: 1rem;
+    }
+}
+

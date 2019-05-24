@@ -41,6 +41,10 @@ a:active {
 .heading-secondary {
     color: $orange-strong-color;
     font-size: 4.2rem;
+    font-weight: 400;
+    &--white {
+        color: $white-color;
+    }
 }
 // paragraphs
 .paragraph-primary {
@@ -102,6 +106,11 @@ textarea {
     color: $main-color-soft;
     font-size: $small-size-font;
 }
+// contact form
+.contact-form__label {
+    color: $white-color;
+}
+
 // map section
 .map {
     &__heading,

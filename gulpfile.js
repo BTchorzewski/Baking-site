@@ -18,7 +18,7 @@ gulp.task('browserSync', function () {
 // .pipe(sass().on('error', sass.logError))
 gulp.task('sass', function () {
     return gulp.src('./sass/**/*.scss')
-        .pipe(sass())
+        .pipe(sass().on('error', sass.logError))
         .pipe(sourcemaps.init())
         .pipe(autoprefixer({
         // specifica
