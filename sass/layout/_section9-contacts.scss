@@ -39,24 +39,35 @@
 .contact-form {
     &__cta {
         position: relative;
-        
+        perspective: 150rem;
     }
     &__input {
         position: absolute;
-        top: rem;
+        top: 0;
         left: 0;
         z-index: 1;
-
+        transition: border 2s;
     }
     &__input:focus + &__label {
-        color: red;
+        transform: translateX(25rem);
+        opacity: 0;
+        
+    }
+    &__input:valid + &__label {
+        opacity: 0;
+    }
+    &__input:invalid,
+    &__textarea {
+        border: .3rem solid rgb(221, 160, 160);
+        outline: none;
+        box-shadow: none;
     }
     &__label {
         position: absolute;
         top: 1rem;
         left: 1rem;
         z-index: 2;
-        transition: all 2s;
+        transition: all .7s ease-in;
     }
 
     

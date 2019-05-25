@@ -194,19 +194,19 @@
             </div>
             <form action="" class="contact-form">
                 <div class="contact-form__cta contact-form__cta--1">
-                    <p class="contact-form__label">Your Name</p>
-                    <input type="text" class="contact-form__input">
+                    <input id="name" type="text" class="contact-form__input" required>
+                    <label for="name" class="contact-form__label">Your Name</label>
                 </div>
                 <div class="contact-form__cta contact-form__cta--2">
-                    <p class="contact-form__label">Email address</p>
-                    <input type="text" class="contact-form__input">
+                    <input id="email" type="email" class="contact-form__input" required>
+                    <label for="email" class="contact-form__label">Email address</label>
                 </div>
                 <div class="contact-form__cta contact-form__cta--3">
-                    <p class="contact-form__label">Subject</p>
-                    <input type="text" class="contact-form__input">
+                    <input id="subject" type="text" class="contact-form__input" required>
+                    <label for="subject" class="contact-form__label">Subject</label>
                 </div>
                 <div class="contact-form__cta contact-form__cta--4">
-                    <textarea name="" id="" cols="30" rows="10" class="contact-form__textarea"></textarea>
+                    <textarea name="" id="" cols="30" rows="10" class="contact-form__textarea" required></textarea>
                 </div>
                 
                 <button class="contact-form__button button-primary-action">Submit now</button>
