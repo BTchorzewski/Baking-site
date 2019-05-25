@@ -58,7 +58,7 @@
     }
     &__input:invalid,
     &__textarea {
-        border: .3rem solid rgb(221, 160, 160);
+        border: .3rem solid $orange-strong-color;
         outline: none;
         box-shadow: none;
     }
@@ -83,9 +83,6 @@
         border: .1rem solid $white-color;
         outline: none;
         background-color: transparent;
-        color: $white-color;
-        font-size: 1.8rem;
-        font-weight: 700;
         padding-left: 1rem;
     }
 }
