@@ -1,5 +1,6 @@
 // button link
 .button-primary {
+    &,
     &:link,
     &:visited {
         background-color: $button-background-color;
@@ -55,6 +56,8 @@
         background-color: $button-background-color;
         box-shadow: 0 .5rem 1rem rgba($black-color,.4);
         transition: all .3s;
+        border-radius: .3rem;
+        border: none;
     &:hover {
         transform: translateY(-0.3rem);
     }

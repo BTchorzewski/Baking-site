@@ -18,6 +18,9 @@ $orange-soft-color: #ff7e66;;
 $orange-strong-color: #f01b16; 
 $btn-orange-color: #ff7e66; 
 
+
+$color-valid:  rgba(24, 134, 7, 0.979);
+$color-invalid: $orange-soft-color;
 // button's color
 $button-background-color: $orange-soft-color;
 $button-text-color: $white-color;

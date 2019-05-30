@@ -64,15 +64,7 @@ a:active {
     letter-spacing: 0.1rem;
     color: $white-color;
 }
-input[type='text'],
-input[type='email'] {
-    height: 3.5rem;
-    color: $white-color;
-}
-textarea {
-    resize: none;
-    
-}
+
 
 .article__title {
     width: 70%;
@@ -107,11 +99,7 @@ textarea {
     font-size: $small-size-font;
 }
 // contact form
-.contact-form__label {
-    color: $white-color;
-    font-size: 1.8rem;
-    font-weight: 700;
-}
+
 
 // map section
 .map {
