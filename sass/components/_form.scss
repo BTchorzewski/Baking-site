@@ -35,7 +35,8 @@
         color: $main-color-soft;
         position: relative;
     }
-    &__input,
+    &__input[type="text"],
+    &__input[type="email"],
     &__textarea {
         background-color: transparent;
         border: .1rem solid $white-color;
