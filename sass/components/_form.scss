@@ -51,6 +51,7 @@
     &__input:required {
         border: .1rem solid $white-color;
         outline: none;
+        box-shadow: none;
     }
     &__input:valid {
         overflow: hidden;
