@@ -18,9 +18,18 @@
         color: $main-color-soft;
         font-weight: 600;
         letter-spacing: 0.1rem;
-     }
+    }
  
     &__social-link {
-        margin: 0 0.2rem;
-     }
+        display: inline-block;
+        transition: all .3s;
+        &:hover {
+        transform: translateY(-.5rem) scale(1.2);
+        }
+    }
+    &__social-link:not(:last-child) {
+        margin-right: 1.2rem;
+    }
+    
+   
 }
