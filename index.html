@@ -14,26 +14,28 @@
 
     <div class="wrapper" id="wrapper">
         <!-- NAVIGATION SECTION -->
-        <nav class="navigation">
+        <div class="navigation">
             <div class="logo u-text-center">
                 <h3 class="logo__text special-font">Top</h3>
                 <p class="logo__subtext">food & drink</p>
             </div>
-            <div class="navigation__burger">
-                <span class="burger__line burger__line-1"></span>
-                <span class="burger__line burger__line-2"></span>
-                <span class="burger__line burger__line-3"></span>
-            </div>
-            <ul class="navigation__list">
-                <li class="navigation__item"><a href="#home" class="navigation__link navigation__link--active">HOME</a></li>
-                <li class="navigation__item"><a href="#reservation" class="navigation__link">RESERVATION</a></li>    
-                <li class="navigation__item"><a href="#menu" class="navigation__link">MENU</a></li>
-                <li class="navigation__item"><a href="#blog" class="navigation__link">BLOG</a></li>
-                <li class="navigation__item"><a href="#features" class="navigation__link">FEATURES</a></li>
-                <li class="navigation__item"><a href="#products" class="navigation__link">SHOP</a></li>
-                <li class="navigation__item"><a href="#contact" class="navigation__link">CONTACTS</a></li>
-            </ul>
-        </nav>   
+            
+            <input type="checkbox" class="navigation__checkbox" id="check-box">
+            <label for="check-box" class="navigation__button">
+                <span class="navigation__icon"></span>
+            </label>
+            
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#home" class="navigation__link">HOME</a></li>
+                    <li class="navigation__item"><a href="#reservation" class="navigation__link">RESERVATION</a></li>    
+                    <li class="navigation__item"><a href="#menu" class="navigation__link">MENU</a></li>
+                    <li class="navigation__item"><a href="#blog" class="navigation__link">BLOG</a></li>
+                    <li class="navigation__item"><a href="#features" class="navigation__link">FEATURES</a></li>
+                    <li class="navigation__item"><a href="#products" class="navigation__link">SHOP</a></li>
+                    <li class="navigation__item"><a href="#contact" class="navigation__link">CONTACTS</a></li>
+                </ul>
+            
+        </div>   
         
         <!--SECTION 1     -->
         <section id='home' class="home">
@@ -255,7 +257,6 @@
                     <h5 class="click__title">PHONE</h5>
                     <p class="click__subtext">(+84)-797-6809</p>
                 </div>
-
             </a>
 
         </section>
@@ -282,7 +283,7 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="scripts/owl-carousel.js"></script>
-    <script src="scripts/navigation.js"></script>
+    <script src="scripts/scripts.js"></script>
+    
 </body>
 </html>

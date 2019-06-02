@@ -17,4 +17,7 @@ $(document).ready(function(){
         dots: false,
         items: 1
     });
+    $(".navigation__link").click(function(){
+        $("#check-box").prop("checked", false)
+    })
 });

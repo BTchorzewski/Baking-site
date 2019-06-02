@@ -3,6 +3,7 @@
     justify-content: space-between;
     align-items: center;
     height: 10rem;
+    width: 100%;
     background-color: $white-color;
     &__list {
         display: flex;
@@ -29,43 +30,17 @@
             font-size: $primary-font;
         }
     }
-    
-}
-// creating burger menu
-.navigation__burger {
-    width: 4rem;
-    height: 4rem;
-    margin-right: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    display: none;
-    .burger__line {
-        width: 90%;
-        height: .4rem;
-        background-color: $orange-strong-color;
+    &__checkbox {
+        opacity: 0;
+        visibility: hidden;
     }
-    &--open {
-        animation: spin .5s;
-        .burger__line-1 {
-            transform: translateY(1rem) rotate(45deg);
-        }
-        .burger__line-2 {
-            opacity: 0;
-        }
-        .burger__line-3 {
-            transform: translateY(-1.2rem) rotate(-45deg);
-        }
-    }
-    &--close {
-        animation: spin .5s;
+    &__button {
+        display: none;
     }
 }
-// creating logo.
+
 .logo {
     padding: 2rem 0 1rem 2rem;
-    
     &__text {
         color: $orange-strong-color;
         font-size: 4rem;
@@ -85,32 +60,90 @@
 
 @media screen and (max-width: 860px) {
     .navigation {
-        position: relative;
-        z-index: 3;
-        ul.navigation__list {
-            position: absolute;
-            z-index: 4;
-            top: 10rem;
-            left: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 90;
+        height: 7rem;
+        &__button {
+            display: inline-block;
+            position: fixed;
+            top: 1.5rem;
+            right: 5rem;
+            z-index: 150;
+            width: 4rem;
+            height: 4rem;
+        }
+        &__icon {
+            &,
+            &::after,
+            &::before {
+                position: absolute;
+                display: inline-block;
+                width: 3rem;
+                height: .3rem;
+                background-color: $main-color-soft;
+                top: 50%;
+                transition: all .3s;
+            }
+            &::before {
+                content: "";
+                top: -1rem;
+            }
+            &::after {
+                content: "";
+                top: 1rem;
+            }
+        }
+        &__list {
             flex-direction: column;
+            justify-content: center;
             align-items: center;
-            justify-content:space-between;
-            margin: 0; 
-            padding: 4rem 0;
-            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
             height: 100vh;
-            clip-path: circle(4rem at 100% 0);
-            background-color: inherit;
+            width: 100%;
+            background-color: rgba($white-color, .8);
             opacity: 0;
-            transition: all .5s ease-in;
+            visibility: hidden;
+            transition: all .4s;
+            transform: scale(.3);
         }
-        ul.navigation__list--open {
-            clip-path: circle(200% at 100% 0);
+        &__item:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+        // functionality
+        &__checkbox:checked ~ &__list {
             opacity: 1;
+            visibility: visible;
+            transform: scale(1);
         }
-        &__burger {
-            display: flex;
-            
+
+        &__checkbox:checked ~ &__button &__icon {
+            background-color: transparent; 
         }
+        &__checkbox:checked ~ &__button &__icon::before {
+            transform: rotate(-135deg);
+            top: .5rem;            
+        }
+        &__checkbox:checked ~ &__button &__icon::after {
+            transform: rotate(135deg);
+            top: .5rem;
+        }
+    }
+
+    .logo {
+        padding: 2rem 0 1rem 2rem;
+        
+        &__text {
+            font-size: 2rem;
+        }
+        &__subtext {
+            font-size: .8rem;
+            padding: .2rem;
+        }
+    
     }
 }
