@@ -1,0 +1,89 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba($black-color, .3);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+    
+    &__content {
+        width: 70%;
+        background-color: $secondary-color;
+        @include absCenter;
+        z-index: 250;
+        border-radius: .2rem;
+        box-shadow: 0 1.5rem 3rem rgba($black-color, .3);
+    }
+    &__close {
+        &:link,
+        &:visited {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            font-size: 2.6rem;
+            color: $main-color-soft;
+            transition: color .4s;
+        }
+        &:hover {
+            color: $orange-soft-color;
+        }
+    }
+}
+
+
+.popup-reservation {
+    text-align: center;
+    &__number {
+        &:link,
+        &:visited {
+            
+            color: $orange-soft-color;
+            font-size: 2.4rem;
+        }
+    }
+}
+
+
+.popup-menu {
+    color: $main-color-soft;
+    &__list {
+        text-align: left;
+        column-count: 3;
+        list-style: none;
+    }
+}
+
+.popup-blog {
+    height: 100%;
+    display: flex;
+    align-content: stretch;
+    &__content {
+        width: 80%;
+        padding: 8rem 2rem;
+        color: $main-color-soft;
+    }
+}
+.popup-map {
+    height: 30rem;
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+
+
+
+// functionality
+#popup-reservation:target,
+#popup-menu:target,
+#popup-blog:target,
+#popup-map:target {
+    opacity: 1;
+    visibility: visible;
+}

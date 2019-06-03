@@ -27,7 +27,7 @@ a:active {
 
 .special-font {
     font-family: $secondary-font;
-    
+    display: inline-block;
 }
 // headings
 .heading-primary {
@@ -41,7 +41,7 @@ a:active {
 .heading-secondary {
     color: $orange-strong-color;
     font-size: 4.2rem;
-    font-weight: 400;
+    font-weight: 300;
     &--white {
         color: $white-color;
     }

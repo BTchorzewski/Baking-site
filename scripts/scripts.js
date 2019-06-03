@@ -10,7 +10,7 @@ $(document).ready(function(){
     });
     $(".carousel2").owlCarousel({
         loop: true,
-        autoplay: false,
+        autoplay: true,
         center: true,
         mouseDrag: true,
         nav: true,
