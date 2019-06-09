@@ -3,26 +3,20 @@
 @import "./base/typography";
 @import "./base/variables";
 @import "./components/carousel";
-@import "./components/navigation";
+@import "./components/click";
+@import "./components/gallery";
 @import "./components/button";
 @import "./components/card";
 @import "./components/form";
 @import "./components/popup";
 // @import "./layout/"
-@import "./layout/section1-home";
-@import "./layout/section2-reservation";
-@import "./layout/section3-advertisment";
-@import "./layout/section4-menu";
-@import "./layout/section5-products";
-@import "./layout/section6-features";
-@import "./layout/section7-gallery";
-@import "./layout/section8-blog";
-@import "./layout/section9-contacts";
-@import "./layout/section10-clicks";
-@import "./layout/section11-map";
-@import "./layout/section12-footer";
+@import "./layout/navigation";
+@import "./layout/header";
+@import "./layout/footer";
+
 
 // @import "./pages/"
+@import "./pages/home";
 // @import "./themes/"
 // @import "./utilis/"
 @import "./utilis/animation";
