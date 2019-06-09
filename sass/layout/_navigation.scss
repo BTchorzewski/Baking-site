@@ -37,29 +37,8 @@
     &__button {
         display: none;
     }
-}
 
-.logo {
-    padding: 2rem 0 1rem 2rem;
-    &__text {
-        color: $orange-strong-color;
-        font-size: 4rem;
-        padding: .2rem 0;
-    }
-    &__subtext {
-        background-color: $blue-color;
-        text-transform: uppercase;
-        color: $white-color;
-        font-size: 1rem;
-        font-weight: 700;
-        vertical-align: bottom;
-        padding: 0.4rem 1rem 0.1rem 1rem;
-    }
-
-}
-
-@media screen and (max-width: 860px) {
-    .navigation {
+    @include respond(tab-port) {
         position: fixed;
         top: 0;
         left: 0;
@@ -114,13 +93,12 @@
         &__item:not(:last-child) {
             margin-bottom: 2rem;
         }
-        // functionality
+        // FUNCTIONALITY
         &__checkbox:checked ~ &__list {
             opacity: 1;
             visibility: visible;
             transform: scale(1);
         }
-
         &__checkbox:checked ~ &__button &__icon {
             background-color: transparent; 
         }
@@ -133,10 +111,27 @@
             top: .5rem;
         }
     }
+}
 
-    .logo {
-        padding: 2rem 0 1rem 2rem;
-        
+.logo {
+    padding: 2rem 0 1rem 2rem;
+    &__text {
+        color: $orange-strong-color;
+        font-size: 4rem;
+        padding: .2rem 0;
+    }
+    &__subtext {
+        background-color: $blue-color;
+        text-transform: uppercase;
+        color: $white-color;
+        font-size: 1rem;
+        font-weight: 700;
+        vertical-align: bottom;
+        padding: 0.4rem 1rem 0.1rem 1rem;
+    }
+
+    @include respond(tab-port) {
+         padding: 2rem 0 1rem 2rem;
         &__text {
             font-size: 2rem;
         }
@@ -144,6 +139,9 @@
             font-size: .8rem;
             padding: .2rem;
         }
-    
     }
 }
+
+
+
+

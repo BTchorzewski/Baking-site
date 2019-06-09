@@ -3,6 +3,13 @@
 
 
 // margins
+.u-margin-bottom-large {
+        margin-bottom: 2rem;
+}
+.u-margin-bottom-medium {}
+.u-margin-bottom-small {}
+
+
 
 // u-margin-top-{1-10}
 @for $i from 1 through 10 {

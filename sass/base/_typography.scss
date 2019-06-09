@@ -31,12 +31,36 @@ a:active {
 }
 // headings
 .heading-primary {
+    display: inline-block;
+    padding-bottom: 10rem;
+    font-size: 7rem;
+    line-height: 4rem;
+    letter-spacing: 0.1rem;
     font-family: $secondary-font;
     font-weight: 700;
     -webkit-text-stroke-color: $white-color;
     -webkit-text-stroke-width: .5rem;
     -webkit-text-fill-color: $orange-strong-color;
     letter-spacing: .5rem;
+    text-align: center;
+    @include respond(tab-land) {
+        -webkit-text-stroke-width: .4rem;
+    }
+
+    @include respond(tab-port) {
+        font-size: 6rem;
+        line-height: 3em;
+        letter-spacing: .2rem;
+        -webkit-text-stroke-width: .3rem;
+        padding: 3rem;
+    }
+
+    @include respond(phone) {
+        font-size: 4rem;
+        -webkit-text-stroke-width: .2rem;
+        line-height: 1.5em;
+    }
+
 }
 .heading-secondary {
     color: $orange-strong-color;
@@ -45,19 +69,24 @@ a:active {
     &--white {
         color: $white-color;
     }
+    @include respond(phone) {
+        line-height: 7rem;
+    }
 }
 // paragraphs
 .paragraph-primary {
     width: 60%;
     color: $main-color-soft;
     margin-top: 6rem;
+
+    &--white {
+        color: $white-color;
+    }
+    @include respond(tab-port) {
+        margin-top: 0;
+    }
 }
 
-.home__title {
-    font-size: 5em;
-    line-height: 4em;
-    letter-spacing: 0.1rem;
-}
 .home__subtitle {
     font-size: 1.2em;
     font-weight: 600;
@@ -71,33 +100,32 @@ a:active {
     color: $orange-soft-color;
     font-size: 4.2rem;
     line-height: 5rem;
+
+    @include respond(phone) {
+        width: 95%;
+        font-size: 3.2rem;
+        line-height: 4rem;
+    }
 }
 .article__subtext {
     color: $main-color-soft;
     width: 70%;
     line-height: 2rem;
+
+    @include respond(phone) {
+        width: 95%;
+    }
 }
 // product section
-.cake__title {
-    font-size: 8rem;
-    line-height: 9rem;
-}
-.cake__subtext {
-    font-size: 0.8em;
-}
+
 .cake__price {
+    color: $white-color;    
     font-size: 4rem;
 }
 // feaures section
 
 // clicks section
-.click__title {
-    margin: 3rem 0 1rem;
-}
-.click__subtext {
-    color: $main-color-soft;
-    font-size: $small-size-font;
-}
+
 // contact form
 
 
