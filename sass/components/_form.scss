@@ -1,34 +1,77 @@
 // grid
-.contact-form {
-    display: grid;
-    grid-gap: 2rem;
-    justify-items: stretch;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 6rem auto 4rem;
-    &__cta {
-        &--1 {
-            grid-column: 1/2;
-            grid-row: 1/2;
+
+@supports (display: grid) {
+    .contact-form {
+        display: grid;
+        grid-gap: 2rem;
+        justify-items: stretch;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 6rem auto 4rem;
+        &__cta {
+            &--1 {
+                grid-column: 1/2;
+                grid-row: 1/2;
+            }
+            &--2 {
+                grid-column: 2/3;
+                grid-row: 1/2;
+            }
+            &--3 {
+                grid-column: 3/4;
+                grid-row: 1/2;
+            }
+            &--4 {
+                grid-column: 1/4;
+                grid-row: 2/3;
+            }
         }
-        &--2 {
-            grid-column: 2/3;
-            grid-row: 1/2;
-        }
-        &--3 {
-            grid-column: 3/4;
-            grid-row: 1/2;
-        }
-        &--4 {
+        &__button {
             grid-column: 1/4;
-            grid-row: 2/3;
+            grid-row: 3/4;
         }
-    }
-    &__button {
-        grid-column: 1/4;
-        grid-row: 3/4;
+
+        @include respond(tab-port) {
+            grid-gap: 3rem;
+            grid-template-rows: repeat(5, auto);
+            &__cta {
+                &--1 {
+                    grid-column: 1/4;
+                    grid-row: 1/2;
+                }
+                &--2 {
+                    grid-column: 1/4;
+                    grid-row: 2/3;
+                }
+                &--3 {
+                    grid-column: 1/4;
+                    grid-row: 3/4;
+                }
+                &--4 {
+                    grid-column: 1/4;
+                    grid-row: 4/5;
+                }
+            }
+            &__button {
+                grid-column: 1/4;
+                grid-row: 5/6;
+            }
+        }
     }
 }
 
+
+@supports  not (display: grid) {
+    .contact-form {
+        display: block;
+        &__cta {
+            display: block;
+            margin: 5rem 0;
+        }
+        &__button {
+            width: 100%;
+        }
+    }
+}
 .contact-form {
     
     &__cta {
@@ -47,6 +90,12 @@
         color: inherit;
         border-radius: .2rem;
         transition: all .5s;
+    }
+    &__textarea {
+        height: 40rem;
+        @include respond(tab-port) {
+            height: 30rem;
+        }
     }
     &__input:required {
         border: .1rem solid $white-color;
@@ -74,4 +123,8 @@
         transform: translateY(-4rem);
     }
 
+}
+
+::placeholder {
+    color: $white-color;
 }

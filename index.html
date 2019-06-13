@@ -78,7 +78,7 @@
                 <p class="article__subtext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, sunt! Tenetur rem deserunt dolorem odio neque, doloribus eligendi vitae! Assumenda dolores beatae ab explicabo fugit eligendi quae harum id maxime nam, ipsum eius culpa nulla? Excepturi, ea esse?</p>
             </article>
         </section>
-        @include respond(tab-port) {
+        
         <!-- SECTION 4 -->
         <section id='menu' class="menu">
             <h2 class="menu__title heading-secondary">OUR <span class="special-font u-margin-left-1">Baking</span></h2>
@@ -119,18 +119,18 @@
 
         <!-- SECTION 6 .-->
         <section id='features' class="features">
-            <article class="features__box features__box1">
-                <img src="./assets/icon_4.png" alt="" class="features__image">
-                <p class="features__text">Online Shopping</p>
-            </article>
-            <article class="features__box features__box2">
-                <img src="./assets/icon_5.png" alt="" class="features__image">
-                <p class="features__text">Free Ship</p>
-            </article>
-            <article class="features__box features__box3">
-                <img src="./assets/icon_6.png" alt="" class="features__image">
-                <p class="features__text">Quality Products</p>
-            </article>
+            <figure class="features__box features__box1">
+                <img srcset="./assets/icon_4.png 1x, ./assets/icon_4_2x.png 2x" alt="icon of shopping trolley" class="features__image">
+                <figcaption class="features__text">Online Shopping</figcaption>
+            </figure>
+            <figure class="features__box features__box2">
+                <img srcset="./assets/icon_5.png 1x, ./assets/icon_5_2x.png 2x" alt="icon of truck" class="features__image">
+                <figcaption class="features__text">Free Ship</figcaption>
+            </figure>
+            <figure class="features__box features__box3">
+                <img srcset="./assets/icon_6.png 1x, ./assets/icon_6_2x.png 2x" alt="icon of thumb up" class="features__image">
+                <figcaption class="features__text">Quality Products</figcaption>
+            </figure>
             
         </section>
 
@@ -211,7 +211,7 @@
                     <label for="subject" class="contact-form__label">Subject</label>
                 </div>
                 <div class="contact-form__cta contact-form__cta--4">
-                    <textarea name="" id="" cols="30" rows="10" class="contact-form__textarea" required></textarea>
+                    <textarea name="" class="contact-form__textarea" required></textarea>
                 </div>
                 
                 <button class="contact-form__button button-primary-action">Submit now</button>
@@ -271,13 +271,13 @@
             <div class="footer__title"><span class="special-font">Top</span></div>
             <p class="footer__copyrights">Copyright 2016 All rights Reserved</p>
             <div class="footer__social-List">
-                <a href="" class="footer__social-link"><img src="./assets/icon_ facebook.png" alt="" class="footer__social-image"></a>
-                <a href="" class="footer__social-link"><img src="./assets/icon_twitter.png" alt="" class="footer__social-image"></a>
-                <a href="" class="footer__social-link"><img src="./assets/icon_linkedin.png" alt="" class="footer__social-image"></a>
-                <a href="" class="footer__social-link"><img src="./assets/icon_instagramm.png" alt="" class="footer__social-image"></a>
-                <a href="" class="footer__social-link"><img src="./assets/icon_vimeo.png" alt="" class="footer__social-image"></a>
+                <a href="" class="footer__social-link"><img srcset="./assets/icon_facebook.png 1x, ./assets/icon_facebook_2x.png 2x" alt="icon of facebook" class="footer__social-image"></a>
+                <a href="" class="footer__social-link"><img srcset="./assets/icon_twitter.png 1x, ./assets/icon_twitter_2x.png 2x" alt="icon of twitter" class="footer__social-image"></a>
+                <a href="" class="footer__social-link"><img srcset="./assets/icon_linkedin.png 1x, ./assets/icon_linkedin_2x.png 2x" alt="icon of linkedin" class="footer__social-image"></a>
+                <a href="" class="footer__social-link"><img srcset="./assets/icon_instagram.png 1x, ./assets/icon_instagram_2x.png 2x" alt="icon of instagram" class="footer__social-image"></a>
+                <a href="" class="footer__social-link"><img srcset="./assets/icon_vimeo.png 1x, ./assets/icon_vimeo_2x.png 2x" alt="icon of vimeo" class="footer__social-image"></a>
             </div>
-        </footer>
+        </footer> 
         
         
     </div>

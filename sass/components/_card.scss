@@ -7,9 +7,15 @@
     margin: 1rem 1.5rem;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
+    box-shadow: 0 .3rem 4rem rgba($black-color, .4);
+    
+    @include respond(phone) {
+        width: 90%;
+    }
     .element__info {
         height: 18rem;    
-        width: 45rem;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -22,6 +28,9 @@
             color: $orange-strong-color;
             font-size: 1.8rem;
             letter-spacing: .2rem;
+        }
+        @include respond(tab-land) {
+            clip-path: none
         }    
     }
     &:hover {

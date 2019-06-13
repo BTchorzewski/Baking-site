@@ -44,11 +44,12 @@ a:active {
     letter-spacing: .5rem;
     text-align: center;
     @include respond(tab-land) {
+        font-size: 8rem;
         -webkit-text-stroke-width: .4rem;
     }
 
     @include respond(tab-port) {
-        font-size: 6rem;
+        font-size: 7rem;
         line-height: 3em;
         letter-spacing: .2rem;
         -webkit-text-stroke-width: .3rem;
@@ -56,7 +57,7 @@ a:active {
     }
 
     @include respond(phone) {
-        font-size: 4rem;
+        font-size: 5.5rem;
         -webkit-text-stroke-width: .2rem;
         line-height: 1.5em;
     }
@@ -66,11 +67,17 @@ a:active {
     color: $orange-strong-color;
     font-size: 4.2rem;
     font-weight: 300;
+    margin-bottom: 2rem;
     &--white {
         color: $white-color;
     }
+
+    @include respond(tab-port){
+        font-size: 3.8rem;
+    }
     @include respond(phone) {
-        line-height: 7rem;
+        font-size: 3.4rem;
+        line-height: 5rem;
     }
 }
 // paragraphs
@@ -117,11 +124,24 @@ a:active {
     }
 }
 // product section
-
-.cake__price {
-    color: $white-color;    
-    font-size: 4rem;
+.cake {
+    &__title {
+        width: 100%;
+    }
+    &__subtext {
+        width: 70%;
+    }
+    &__price {
+        color: $white-color;    
+        font-size: 4rem;
+        @include respond(phone) {
+            width: 70%;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+    }
 }
+
 // feaures section
 
 // clicks section

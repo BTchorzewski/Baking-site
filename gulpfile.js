@@ -19,9 +19,6 @@ gulp.task('server', function () {
 gulp.task('sass', function () {
     return gulp.src('./sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(autoprefixer({
-            browsers: ['last 10 versions']
-        }))
         .pipe(csslint())
         .pipe(gulp.dest('./css/'))
         .pipe(browserSync.reload({
