@@ -16,6 +16,7 @@
     "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.2.0",
     "gulp-csslint": "^1.0.1",
+    "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
     "jshint": "^2.9.6",

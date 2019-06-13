@@ -7,27 +7,23 @@ var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 var csslint = require('gulp-csslint');
 var cleanCSS = require('gulp-clean-css');
-// .pipe(cleanCSS({compatibility: 'ie8'}))
-gulp.task('browserSync', function () {
+var rename = require('gulp-rename');
+gulp.task('server', function () {
     browserSync.init({
         server: {
             baseDir: './'
         }
     });
 });
-// .pipe(sass().on('error', sass.logError))
+
 gulp.task('sass', function () {
     return gulp.src('./sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(sourcemaps.init())
         .pipe(autoprefixer({
-        // specifica
-        browsers: ['> 1%'],
-        cascade: false
-    }))
+            browsers: ['last 10 versions']
+        }))
         .pipe(csslint())
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./css/style'))
+        .pipe(gulp.dest('./css/'))
         .pipe(browserSync.reload({
         stream: true
     }));
@@ -48,9 +44,26 @@ gulp.task("js", function(){
     
 });
 
-gulp.task('watch', ['browserSync', 'sass', 'html', 'js'], function () {
+
+gulp.task('start', ['browserSync', 'sass', 'html', 'js'], function () {
     gulp.watch('./sass/**/*.scss', ['sass']);
     gulp.watch('./index.html', ['html']);
     gulp.watch('./scripts/*.js', ['js']);
 });
+
+gulp.task('build', function () {
+    return gulp.src('./sass/style.scss')
+        .pipe(sass())
+        .pipe(sourcemaps.init())
+        .pipe(autoprefixer({
+        browsers: ['last 10 versions']
+    }))
+        .pipe(sourcemaps.write())
+        .pipe(cleanCSS())
+        .pipe(rename('style.min.css'))
+        .pipe(gulp.dest('./css'))
+    });
+
+
+
 gulp.task('default', ['sass', 'watch', 'html' ]);
