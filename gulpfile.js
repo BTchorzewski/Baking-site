@@ -45,7 +45,7 @@ gulp.task("js", function(){
 });
 
 
-gulp.task('start', ['browserSync', 'sass', 'html', 'js'], function () {
+gulp.task('start', ['server', 'sass', 'html', 'js'], function () {
     gulp.watch('./sass/**/*.scss', ['sass']);
     gulp.watch('./index.html', ['html']);
     gulp.watch('./scripts/*.js', ['js']);
