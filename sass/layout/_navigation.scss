@@ -18,16 +18,16 @@
         &:link,
         &:visited {
             text-decoration: none;  
-            color: $main-color;
-            font-size: $primary-font;
+            color: lighten($black-color, 35%);
+            font-size: 4rem;
         }
         &:hover {
             border-bottom: .8rem solid yellow;
         }
         &:active {
             text-decoration: none;  
-            color: $main-color;
-            font-size: $primary-font;
+            color: lighten($black-color, 35%);
+            font-size: 4rem;
         }
     }
     &__checkbox {

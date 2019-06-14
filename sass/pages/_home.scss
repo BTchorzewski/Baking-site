@@ -76,9 +76,7 @@
         @include respond(phone) {
             background-position: center right;
             align-items: center;
-            &__button {
-                width: 70%;
-            }
+            
         }
         @include respond(big-desktop) {
             background-image: url(../assets/cake1_large.jpg);

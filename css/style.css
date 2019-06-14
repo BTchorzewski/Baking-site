@@ -25,7 +25,7 @@ Choosen breakpoints:
   src: url(../fonts/master_of_break.ttf) format("truetype"); }
 
 body {
-  color: #120203;
+  color: #000;
   font-family: "Nanami-book";
   font-size: 1.6rem; }
 
@@ -34,7 +34,7 @@ a:visited,
 a:hover,
 a:active {
   font-family: "Nanami-book";
-  color: #120203;
+  color: #000;
   font-size: 1.6rem;
   text-decoration: none;
   text-align: center; }
@@ -45,17 +45,21 @@ a:active {
 
 .heading-primary {
   display: inline-block;
-  padding-bottom: 10rem;
+  padding-top: 5rem;
   font-size: 7rem;
-  line-height: 4rem;
-  letter-spacing: 0.1rem;
+  line-height: 10rem;
+  letter-spacing: 0.5rem;
   font-family: "master_of_break";
   font-weight: 700;
   -webkit-text-stroke-color: #fff;
   -webkit-text-stroke-width: .5rem;
   -webkit-text-fill-color: #f01b16;
-  letter-spacing: .5rem;
-  text-align: center; }
+  text-align: center;
+  position: relative; }
+  .heading-primary__letter {
+    font-size: 8.5rem;
+    position: absolute;
+    transform: translate(-2rem, -2rem); }
   @media (max-width: 75em) {
     .heading-primary {
       font-size: 8rem;
@@ -89,9 +93,9 @@ a:active {
       line-height: 5rem; } }
 
 .paragraph-primary {
-  width: 60%;
+  width: 100%;
   color: #9f9a97;
-  margin-top: 6rem; }
+  margin-top: 1rem; }
   .paragraph-primary--white {
     color: #fff; }
   @media (max-width: 56.25em) {
@@ -127,14 +131,15 @@ a:active {
   width: 100%; }
 
 .cake__subtext {
-  width: 70%; }
+  padding: 1rem 4.5rem; }
 
 .cake__price {
   color: #fff;
-  font-size: 4rem; }
+  font-size: 4rem;
+  padding: 0 4.5rem; }
   @media (max-width: 37.5em) {
     .cake__price {
-      width: 70%;
+      width: 100%;
       margin-bottom: 2rem;
       text-align: left; } }
 
@@ -226,20 +231,20 @@ body {
   .click:hover .click__image {
     background-size: 120%; }
   .click:nth-of-type(1) .click__image {
-    background-image: url(../../assets/cover_15.png); }
+    background-image: url(../assets/cover_15.png); }
   .click:nth-of-type(2) {
     margin: 0 3rem; }
     .click:nth-of-type(2) .click__image {
-      background-image: url(../../assets/cover_16.png); }
+      background-image: url(../assets/cover_16.png); }
   .click:nth-of-type(3) .click__image {
-    background-image: url(../../assets/cover_17.png); }
+    background-image: url(../assets/cover_17.png); }
 
 .click__title {
   margin: 3rem 0 1rem; }
 
 .click__subtext {
   color: #9f9a97;
-  font-size: 1.2rem; }
+  font-size: 1.4rem; }
 
 .gallery {
   display: grid;
@@ -252,6 +257,7 @@ body {
     justify-content: center;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     overflow: hidden; }
     .gallery__item .gallery__description {
       grid-column: 1 / 2;
@@ -282,7 +288,7 @@ body {
   .gallery__item--1 {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    background-image: url(../../assets/cover_4.png); }
+    background-image: url(../assets/cover_4.png); }
   .gallery__item--2 {
     grid-column: 2 / 3;
     grid-row: 1 / 2; }
@@ -301,19 +307,19 @@ body {
   .gallery__item--3 {
     grid-column: 3 / 5;
     grid-row: 1 / 2;
-    background-image: url(../../assets/cover_5.png); }
+    background-image: url(../assets/cover_5.png); }
   .gallery__item--4 {
     grid-column: 1 / 3;
     grid-row: 2 / 3;
-    background-image: url(../../assets/cover_6.png); }
+    background-image: url(../assets/cover_6.png); }
   .gallery__item--5 {
     grid-column: 3 / 4;
     grid-row: 2 / 3;
-    background-image: url(../../assets/cover_7.png); }
+    background-image: url(../assets/cover_7.png); }
   .gallery__item--6 {
     grid-column: 4 / 5;
     grid-row: 2 / 3;
-    background-image: url(../../assets/cover_8.png); }
+    background-image: url(../assets/cover_8.png); }
   @media (max-width: 37.5em) {
     .gallery {
       grid-template-rows: repeat(3, minmax(30rem, 1fr)); }
@@ -336,7 +342,7 @@ body {
         grid-row: 2 / 3; } }
 
 .button-primary, .button-primary:link, .button-primary:visited {
-  background-color: #ff7e66;
+  background-color: #fff;
   color: #fff;
   line-height: 6rem;
   width: 24rem;
@@ -361,7 +367,12 @@ body {
   font-weight: 400;
   border: 0.3rem solid #fff;
   background-color: transparent;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin: 1rem 0 0 4.5rem; }
+  @media (max-width: 37.5em) {
+    .button-secondary:link, .button-secondary:visited {
+      width: 30%;
+      margin: 1rem auto 0 4.5rem; } }
 
 .button-secondary:hover {
   transform: translateY(-0.3rem); }
@@ -376,7 +387,7 @@ body {
   font-size: 1.4rem;
   font-weight: 600;
   text-transform: uppercase;
-  background-color: #ff7e66;
+  background-color: #fff;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
   transition: all .3s;
   border-radius: .3rem;
@@ -428,13 +439,13 @@ body {
       clip-path: circle(90% at 50% -25%);
       transform: scale(1.1); }
   .element__article:nth-of-type(1) {
-    background-image: url(../../assets/cover_9.png); }
+    background-image: url(../assets/cover_9.png); }
   .element__article:nth-of-type(2) {
-    background-image: url(../../assets/cover_10.png); }
+    background-image: url(../assets/cover_10.png); }
   .element__article:nth-of-type(3) {
-    background-image: url(../../assets/cover_11.png); }
+    background-image: url(../assets/cover_11.png); }
   .element__article:nth-of-type(4) {
-    background-image: url(../../assets/cover_12.png); }
+    background-image: url(../assets/cover_12.png); }
 
 .element__button {
   display: inline-block; }
@@ -643,14 +654,14 @@ body {
     list-style: none; }
   .navigation__link:link, .navigation__link:visited {
     text-decoration: none;
-    color: #120203;
-    font-size: "Nanami-book"; }
+    color: #595959;
+    font-size: 4rem; }
   .navigation__link:hover {
     border-bottom: .8rem solid yellow; }
   .navigation__link:active {
     text-decoration: none;
-    color: #120203;
-    font-size: "Nanami-book"; }
+    color: #595959;
+    font-size: 4rem; }
   .navigation__checkbox {
     opacity: 0;
     visibility: hidden; }
@@ -769,7 +780,7 @@ body {
     font-size: 2.4rem;
     margin-top: 2rem; }
   .footer__copyrights {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: #9f9a97;
     font-weight: 600;
     letter-spacing: 0.1rem; }
@@ -830,7 +841,7 @@ body {
   padding: 5rem 0; }
 
 .products .cake {
-  background-image: url(../../assets/cake1_medium.jpg);
+  background-image: url(../assets/cake1_medium.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -840,17 +851,15 @@ body {
   padding: 10% 10% 10% 55%; }
   @media (max-width: 56.25em) {
     .products .cake {
-      background-image: url(../../assets/cake1_small.jpg);
+      background-image: url(../assets/cake1_small.jpg);
       padding: 15% 5%; } }
   @media (max-width: 37.5em) {
     .products .cake {
       background-position: center right;
-      align-items: center; }
-      .products .cake__button {
-        width: 70%; } }
+      align-items: center; } }
   @media (min-width: 112.5em) {
     .products .cake {
-      background-image: url(../../assets/cake1_large.jpg); } }
+      background-image: url(../assets/cake1_large.jpg); } }
 
 .features {
   height: 25rem;
@@ -908,7 +917,7 @@ body {
 
 .contacts {
   padding: 15rem 10rem;
-  background-image: url(../../assets/cover_13.png);
+  background-image: url(../assets/cover_13.png);
   background-size: cover;
   background-position: center;
   box-shadow: inset 200rem 200rem rgba(0, 0, 0, 0.4); }
@@ -929,17 +938,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(../../assets/cover_14_medium.jpg);
+  background-image: url(../assets/cover_14_medium.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left top;
   box-shadow: inset 0 0 0 200rem rgba(0, 0, 0, 0.45); }
   @media (max-width: 37.5em) {
     .map {
-      background-image: url(../../assets/cover_14_small.jpg); } }
+      background-image: url(../assets/cover_14_small.jpg); } }
   @media (min-width: 112.5em) {
     .map {
-      background-image: url(../../assets/cover_14_large.jpg); } }
+      background-image: url(../assets/cover_14_large.jpg); } }
 
 @keyframes spin {
   0% {
