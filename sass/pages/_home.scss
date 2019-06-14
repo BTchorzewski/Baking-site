@@ -58,32 +58,7 @@
     padding: 5rem 0;
 }
 
-.products {
-    .cake {
-        background-image: url(../assets/cake1_medium.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 10% 10% 10% 55%;
 
-        @include respond(tab-port) {
-            background-image: url(../assets/cake1_small.jpg);
-            padding: 15% 5%;
-        }
-        @include respond(phone) {
-            background-position: center right;
-            align-items: center;
-            
-        }
-        @include respond(big-desktop) {
-            background-image: url(../assets/cake1_large.jpg);
-        }
-    }
-
-}
 
 .features {
     height: 25rem;

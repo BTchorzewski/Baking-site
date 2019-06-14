@@ -1,0 +1,73 @@
+.cake {
+    background-image: url(../assets/cake1_medium.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10% 10% 10% 50%;
+
+
+    @include respond(tab-port) {
+        background-image: url(../assets/cake1_small.jpg);
+        padding: 15% 10%;
+    }
+    @include respond(phone) {
+        background-position: center right;
+        align-items: left;
+        
+    }
+    @include respond(big-desktop) {
+        background-image: url(../assets/cake1_large.jpg);
+    }
+
+    &__subtext {
+        font-size: 1.8rem;
+        width: 80%;
+        @include respond(phone) {
+            width: 100%;
+        }
+    }
+
+    &__price {
+        color: $white-color;
+        font-size: 3.6rem;
+        margin-top: 2rem;
+        @include respond(phone) {
+            margin-top: 1rem;
+        }
+    }
+
+    &__button {
+        &:link,
+        &:visited {
+            background-color: transparent;
+            width: 10rem;
+            height: 4rem;
+            line-height: 4rem;
+            text-align: center;
+            color: $white-color;
+            font-size: 1.8rem;
+            font-weight: 400;
+            border: 0.2rem solid $white-color;
+            box-shadow: 0 .1rem 1rem rgba($black-color,.2); 
+            background-color: transparent;
+            text-transform: uppercase;
+            margin: 2rem 0 0 0;
+            @include respond(phone) {
+                width: 30%;
+                margin: 1rem 0 0 0;
+            }
+        }
+        
+        &:hover {
+            transform: translateY(-0.3rem);
+            box-shadow: 0 .1rem 3rem rgba($black-color,.2);
+        }
+        &:active {
+            transform: translateY(0);
+            box-shadow: 0 .1rem 1rem rgba($black-color,.4);  
+        }
+    }
+}

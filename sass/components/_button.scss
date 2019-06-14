@@ -20,35 +20,7 @@
     
 }
 
-.button-secondary {
-    &:link,
-    &:visited {
-        background-color: transparent;
-        width: 15rem;
-        height: 6rem;
-        line-height: 6rem;
-        text-align: center;
-        color: $white-color;
-        font-size: 2rem;
-        font-weight: 400;
-        border: 0.3rem solid $white-color;
-        background-color: transparent;
-        text-transform: uppercase;
-        margin: 1rem 0 0 4.5rem;
-        @include respond(phone) {
-            width: 30%;
-            margin: 1rem auto 0 4.5rem;
-        }
-    }
-    
-    &:hover {
-        transform: translateY(-0.3rem);
-    }
-    &:active {
-        transform: translateY(0);
-        box-shadow: 0 .1rem 1rem rgba($black-color,.4);  
-    }
-}
+
 
 // action buttons
 .button-primary-action {

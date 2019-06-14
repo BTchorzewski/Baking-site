@@ -11,12 +11,16 @@
     transition: all .3s;
     
     &__content {
-        width: 70%;
+        width: 80%;
         background-color: $secondary-color;
         @include absCenter;
         z-index: 250;
         border-radius: .2rem;
         box-shadow: 0 1.5rem 3rem rgba($black-color, .3);
+        
+        @include respond(photo) {
+            
+        }
     }
     &__close {
         &:link,
@@ -37,7 +41,7 @@
 
 .popup-reservation {
     text-align: center;
-
+    line-height: 5rem;
     
     &__number {
         &:link,
@@ -56,6 +60,29 @@
         text-align: left;
         column-count: 3;
         list-style: none;
+        
+        @include respond(tab-port) {
+            width: 80%;
+            column-count: 2;
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
+        @include respond(phone) {
+            column-count: 1;
+            margin-left: 60%;
+            transform: translateX(-60%);
+        }
+    }
+    &__item {
+        @include respond(tab-port) {
+            &:not(:first-child) {
+                margin-top: 5%;
+            }
+            
+        }
+        @include respond(phone) {
+            column-count: 1
+        }
     }
 }
 
@@ -63,10 +90,13 @@
     height: 100%;
     display: flex;
     align-content: stretch;
+    &__image {
+        max-height: 100%;
+    }
     @include respond(phone) {
         flex-direction: column-reverse;
         &__image {
-            max-height: 30rem;
+            max-height: 20%;
         }
     }
     

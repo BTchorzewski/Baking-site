@@ -19,7 +19,7 @@
         &:visited {
             text-decoration: none;  
             color: lighten($black-color, 35%);
-            font-size: 1.6rem;
+            font-size: 1.8rem;
         }
         &:hover {
             border-bottom: .8rem solid yellow;
@@ -27,7 +27,7 @@
         &:active {
             text-decoration: none;  
             color: lighten($black-color, 35%);
-            font-size: 4rem;
+            font-size: 1.8rem;
         }
     }
     &__checkbox {
@@ -89,6 +89,15 @@
             visibility: hidden;
             transition: all .4s;
             transform: scale(.3);
+        }
+        &__link {
+            &:link,
+            &:visited {
+                font-size: 3.8rem;
+            }
+            &:active {
+                font-size: 3.8rem;
+            }
         }
         &__item:not(:last-child) {
             margin-bottom: 2rem;

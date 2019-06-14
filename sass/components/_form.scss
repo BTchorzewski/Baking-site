@@ -29,7 +29,6 @@
             grid-column: 1/4;
             grid-row: 3/4;
         }
-
         @include respond(tab-port) {
             grid-gap: 3rem;
             grid-template-rows: repeat(5, auto);
@@ -59,19 +58,17 @@
     }
 }
 
-
-@supports  not (display: grid) {
-    .contact-form {
+.contact-form {
+    display: block;
+    &__cta {
         display: block;
-        &__cta {
-            display: block;
-            margin: 5rem 0;
-        }
-        &__button {
-            width: 100%;
-        }
+        margin: 5rem 0;
+    }
+    &__button {
+        width: 100%;
     }
 }
+
 .contact-form {
     
     &__cta {
@@ -122,7 +119,6 @@
         opacity: 0;
         transform: translateY(-4rem);
     }
-
 }
 
 ::placeholder {

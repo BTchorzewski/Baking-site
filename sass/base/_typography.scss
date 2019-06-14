@@ -72,6 +72,7 @@ a:active {
 .heading-secondary {
     color: $orange-strong-color;
     font-size: 4.2rem;
+    line-height: 5rem;
     font-weight: 300;
     margin-bottom: 2rem;
     &--white {
@@ -88,7 +89,7 @@ a:active {
 }
 // paragraphs
 .paragraph-primary {
-    width: 100%;
+    width: 70%;
     color: $main-color-soft;
     margin-top: 1rem;
 
@@ -130,24 +131,6 @@ a:active {
     }
 }
 // product section
-.cake {
-    &__title {
-        width: 100%;
-    }
-    &__subtext {
-        padding: 1rem 4.5rem;
-    }
-    &__price {
-        color: $white-color;    
-        font-size: 4rem;
-        padding: 0 4.5rem;
-        @include respond(phone) {
-            width: 100%;
-            margin-bottom: 2rem;
-            text-align: left;
-        }
-    }
-}
 
 // feaures section
 
