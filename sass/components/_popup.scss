@@ -17,7 +17,7 @@
         z-index: 250;
         border-radius: .2rem;
         box-shadow: 0 1.5rem 3rem rgba($black-color, .3);
-        
+        padding: 3.5rem 0;
         @include respond(photo) {
             
         }

@@ -523,13 +523,14 @@ body {
           grid-column: 1/4;
           grid-row: 5/6; } } }
 
-.contact-form {
-  display: block; }
-  .contact-form__cta {
-    display: block;
-    margin: 5rem 0; }
-  .contact-form__button {
-    width: 100%; }
+@supports (display: grid) {
+  .contact-form {
+    display: block; }
+    .contact-form__cta {
+      display: block;
+      margin: 5rem 0; }
+    .contact-form__button {
+      width: 100%; } }
 
 .contact-form__cta {
   color: #9f9a97;
@@ -600,7 +601,8 @@ body {
     transform: translate(-50%, -50%);
     z-index: 250;
     border-radius: .2rem;
-    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.3); }
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.3);
+    padding: 3.5rem 0; }
   .popup__close:link, .popup__close:visited {
     position: absolute;
     top: 2rem;

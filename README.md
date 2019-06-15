@@ -3,6 +3,6 @@
 
 **Technologie:** html5, css3, css grid, css flexbox, clip-path, sass(variables, mixins), responding web desing, javascript, gulp, jquery, owlcarousel. 
 
-**Status:** in progress
+**Status:** Production
 
 Projekt strony został udostępniony przez grupę "Weekly WebDev Challenge" na serwisie społecznościowym Facebook.
